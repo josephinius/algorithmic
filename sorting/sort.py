@@ -229,18 +229,17 @@ def randomised_partition(alist, p, r):
     alist[r], alist[i] = alist[i], alist[r]
     return partition(alist, p, r)
 
-def shell_sort(alist):
+def shell_sort(list_to_sort):
     """
     Sorts a list by first sorting far apart elements, 
     then making the gap progressively smaller. 
         
     :param list_to_sort: list to sort
     """
-    gap = len(alist) // 2
+    gap = len(list_to_sort) // 2
     while gap > 0:
         for start in range(gap):
-            gap_insertion_sort(alist, start, gap)
-        print("After increments of size", gap, "The list is", alist)
+            gap_insertion_sort(list_to_sort, start, gap)
         gap = gap // 2
 
 def gap_insertion_sort(alist, start, gap):
