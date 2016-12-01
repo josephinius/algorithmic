@@ -118,6 +118,8 @@ def recursive_binary_search(alist, key, l=None, h=None):
     
     :param alist: list on which to search 
     :param key: key to search  
+    :param l: start index 
+    :param h: end index 
     :return: position where to insert key 
     """
     if l == None: l = 0 
@@ -150,7 +152,7 @@ def modified_bubble_sort(list_to_sort):
     """
     Sorts a list by repeatedly stepping through the list, where each pair of 
     adjacent items is compared and swapped if the elements are in the wrong order. 
-    If no exchanges occurred during a pass, the list is sorted. 
+    If no exchanges occurred during the last pass, the  while loop terminates. 
         
     :param list_to_sort: list to sort
     :return: sorted list
@@ -172,6 +174,8 @@ def quick_sort(list_to_sort, p=None, r=None):
     Sorts a list by repeatedly dividing it into two partitions according to a pivot. 
         
     :param list_to_sort: list to sort
+    :param p: start index 
+    :param r: end index 
     """
     if p == None: p = 0
     if r == None: r = len(list_to_sort) - 1
