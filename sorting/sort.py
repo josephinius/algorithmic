@@ -55,7 +55,7 @@ def merge(left, right):
     merged = []
     l, r = 0, 0
     while l < len(left) and r < len(right):
-        if left[l] < right[r]:
+        if left[l] <= right[r]:
             merged.append(left[l])
             l += 1
         else:
@@ -126,7 +126,7 @@ def recursive_binary_search(alist, key, l=None, h=None):
     if h == None: h = len(alist) - 1 
     if l <= h: 
         middle = l + (h-l) // 2 
-        if key > alist[middle]:
+        if key >= alist[middle]:
             l = middle + 1 
         else: 
             h = middle - 1 
