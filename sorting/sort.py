@@ -40,6 +40,7 @@ def merge_sort(list_to_sort):
     n = len(list_to_sort)
     if n == 1:
         return list_to_sort
+    mid = n // 2
     left = merge_sort(list_to_sort[:mid])
     right = merge_sort(list_to_sort[mid:])
     return merge(left, right)
